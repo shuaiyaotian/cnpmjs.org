@@ -7,6 +7,7 @@
     "dev": "DEBUG=cnpm* node dispatch.js",
     "test": "make jshint && make test",
     "start": "./bin/nodejsctl start && cp History.md docs/web/history.md",
+    "startProd": "HOME=/home/shared npm start",
     "status": "./bin/nodejsctl status",
     "stop": "./bin/nodejsctl stop"
   },

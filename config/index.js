@@ -27,7 +27,7 @@ var config = {
 
   registryPort: 7001,
   webPort: 7002,
-  bindingHost: '127.0.0.1', // only binding on 127.0.0.1 for local access
+  bindingHost: '0.0.0.0',
 
   // debug mode
   // if in debug mode, some middleware like limit wont load
@@ -135,7 +135,7 @@ var config = {
   downloadRedirectToNFS: false,
 
   // registry url name
-  registryHost: 'r.cnpmjs.org',
+  registryHost: 'npm.zhenguanyu.com',
 
   /**
    * registry mode config
@@ -168,11 +168,11 @@ var config = {
   // sync source, upstream registry
   // If you want to directly sync from official npm's registry
   // please drop them an email first
-  sourceNpmRegistry: 'https://registry.npm.taobao.org',
+  sourceNpmRegistry: 'https://registry.npmjs.com',
 
   // upstream registry is base on cnpm/cnpmjs.org or not
   // if your upstream is official npm registry, please turn it off
-  sourceNpmRegistryIsCNpm: true,
+  sourceNpmRegistryIsCNpm: false,
 
   // if install return 404, try to sync from source registry
   syncByInstall: true,

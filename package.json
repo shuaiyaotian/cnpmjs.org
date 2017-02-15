@@ -4,12 +4,10 @@
   "description": "Private npm registry and web for Enterprise, base on MySQL and Simple Store Service",
   "main": "index.js",
   "scripts": {
-    "dev": "DEBUG=cnpm* node dispatch.js",
-    "test": "make jshint && make test",
-    "start": "./bin/nodejsctl start && cp History.md docs/web/history.md",
-    "startProd": "HOME=/home/shared npm start",
-    "status": "./bin/nodejsctl status",
-    "stop": "./bin/nodejsctl stop"
+    "start": "HOME=/home/shared  ./bin/nodejsctl start && cp History.md docs/web/history.md",
+    "status": "HOME=/home/shared  ./bin/nodejsctl status",
+    "stop": "HOME=/home/shared  ./bin/nodejsctl stop",
+    "restart": "npm stop && npm start"
   },
   "bin": {
     "cnpmjs.org": "bin/cli.js"
@@ -74,7 +72,7 @@
     "pg": "5",
     "pg-hstore": "2",
     "should": "8",
-    "should-http": "*",
+    "should-http": "=0.0.4",
     "sqlite3": "*",
     "supertest": "2",
     "thunk-mocha": "1"

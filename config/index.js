@@ -6,7 +6,7 @@ var path = require('path');
 var fs = require('fs');
 var os = require('os');
 
-var version = require('../package.json').version;
+var version = require('../../../Downloads/cnpmjs.org-master/package.json').version;
 
 var root = path.dirname(__dirname);
 var dataDir = path.join(process.env.HOME || root, '.cnpmjs.org');
@@ -27,7 +27,7 @@ var config = {
 
   registryPort: 7001,
   webPort: 7002,
-  bindingHost: '0.0.0.0',
+  bindingHost: '127.0.0.1', // only binding on 127.0.0.1 for local access
 
   // debug mode
   // if in debug mode, some middleware like limit wont load
@@ -135,7 +135,7 @@ var config = {
   downloadRedirectToNFS: false,
 
   // registry url name
-  registryHost: 'npm.zhenguanyu.com',
+  registryHost: 'r.cnpmjs.org',
 
   /**
    * registry mode config
@@ -168,11 +168,11 @@ var config = {
   // sync source, upstream registry
   // If you want to directly sync from official npm's registry
   // please drop them an email first
-  sourceNpmRegistry: 'https://registry.npmjs.com',
+  sourceNpmRegistry: 'https://registry.npm.taobao.org',
 
   // upstream registry is base on cnpm/cnpmjs.org or not
   // if your upstream is official npm registry, please turn it off
-  sourceNpmRegistryIsCNpm: false,
+  sourceNpmRegistryIsCNpm: true,
 
   // if install return 404, try to sync from source registry
   syncByInstall: true,
